@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: "urcop_sneakers_frontend"
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
